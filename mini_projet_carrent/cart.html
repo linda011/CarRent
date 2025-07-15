@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <form id="cartform">
+        <h1>Shopping Cart</h1>
+        <div class="cartitems">
+            <ul id="cart-items">
+                <!-- Cart items will be added here dynamically -->
+            </ul>
+            <div id="cart-total" ></div>
+            <div class="input">
+                <input type="submit" value="Check Out >">
+                <input type="button" value="< Continue Shopping" id="catalogueBtn">
+            </div>
+        </div>
+    </form>
+    <script src="main.js"></script>
+    <script>
+        document.getElementById("cartform").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            window.location.href = "confirmation.html"; // Redirect to confirmation.html
+        });
+
+        // Add event listener for the catalogue button
+        document.getElementById("catalogueBtn").addEventListener("click", function() {
+            window.location.href = "catalogue.html"; // Redirect to catalogue.html
+        });
+
+        showCart();
+    </script>
+</body>
+</html>

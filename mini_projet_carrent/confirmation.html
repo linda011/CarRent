@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title"><h1>Checkout</h1></div>
+        <form action="vendeur.html" method="POST" id="confirm">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details1">Name</span>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details2">Surname</span>
+                    <input type="text" id="surname" placeholder="Enter your surname" required>
+                </div>
+                <div class="input-box">
+                    <span class="details1">Email</span>
+                    <input type="text" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
+                    <span class="details1">Phone Number</span>
+                    <input type="text" id="phoneNumber" placeholder="Enter your number" required>
+                </div>
+                <div class="input-box">
+                    <span class="details1">Shipping Address</span>
+                    <input type="text" id="address" placeholder="Enter your shipping address" required>
+                </div>
+                <div class="input-box">
+                    <span class="details1">Email Address</span>
+                    <input type="text" id="emailAddress" placeholder="Enter your email address" required>
+                </div>
+                <div class="input-box" >
+                    <span class="details1">date de delibration</span>
+                    <input type="date"  id="deliveryDate" placeholder="Enter your adress"required>
+                </div>
+                <div class="input">
+                    <input onclick="submitForm" type="submit" value="confirmer">
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        
+            document.getElementById("confirm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent form submission
+                window.location.href = "end.html"; // Redirect to end.html for clients
+            })
+        
+        function submitForm() {
+          var name = document.getElementById("name").value;
+          var surname = document.getElementById("surname").value;
+          var email = document.getElementById("email").value;
+          var phoneNumber = document.getElementById("phoneNumber").value;
+          var address = document.getElementById("address").value;
+          var emailAddress = document.getElementById("emailAddress").value;
+          var deliveryDate = document.getElementById("deliveryDate").value;
+          // Store data in localStorage
+          localStorage.setItem("name", name);
+          localStorage.setItem("surname", surname);
+          localStorage.setItem("email", email);
+          localStorage.setItem("phoneNumber", phoneNumber);
+          localStorage.setItem("address", address);
+          localStorage.setItem("emailAddress", emailAddress);
+          localStorage.setItem("deliveryDate", deliveryDate);
+          
+          // Redirect to the second HTML page
+          window.location.href = "vendeur.html";
+        }
+        </script>
+</body>
+</html>

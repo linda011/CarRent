@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <form id="endform" action="#">
+        <h1>Your Order Is On Its Way</h1>
+        <img src="img/conf2.png" id="endimg" alt="">
+        <h1>Thank You For Shopping With Us</h1>
+        <div class="input">
+            <input type="submit" id="endbtn" value="Back To Homepage">
+        </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById("confirm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            window.location.href = "catalogue.html"; // Redirect to end.html for clients
+        })
+    </script>
+</body>
+</html>

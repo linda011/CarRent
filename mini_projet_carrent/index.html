@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>Sign Up</h1>
+    <form action="#" method="POST" onsubmit="redirectToPage(event)">
+        <label for="login">Login :</label><br>
+        <input type="text" id="login" name="login" required><br>
+        <label for="password">Mot de passe :</label><br>
+        <input type="password" id="password" name="password" required><br>
+        <label for="type">Type de connexion :</label><br>
+        <select id="type" name="type">
+            <option value="client">Client</option>
+            <option value="vendeur">Vendeur</option>
+        </select><br>
+        <input type="submit" value="Se connecter">
+    </form>
+
+    <script>
+        function redirectToPage(event) {
+            event.preventDefault();
+            var type = document.getElementById("type").value;
+            if (type === "vendeur") {
+                window.location.href = "vendeur.html";
+            } else {
+                window.location.href = "catalogue.html";
+            }
+        }
+    </script>
+</body>
+</html>

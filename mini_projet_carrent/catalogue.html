@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car rent</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' >
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <a href="#" class="logo">Car <span>Point</span> </a>
+            <ul class="navbar">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#cars">Cars</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#parts">Parts</a></li>
+                <li><a href="#blog">Our Blog</a></li>
+            </ul>
+            <a href="index.html"><i class='bx bx-user' id="user"></i></a>
+            <div class="icon-cart">
+                <a href="cart.html"><i class='bx bx-cart-alt' id="cart"></i></a></div>
+            <i class='bx bx-search-alt-2' id="search-icon"></i>
+            <div class="search-box container">
+                <input type="search" name="" id="" placeholder="search here...">
+            </div>
+        </div>
+    </header>
+    <!--home-->
+    
+    <section class="home" id="home">
+        <div class="main" id="#Home">
+            <div class="main_content">
+                <div class="main_text">
+                    <h1>We Have Everything Your <br> <span>Car </span>Need</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quam odio ullam vitae obcaecati aspernatur, quidem tempora quaerat ratione repellendus fuga nobis laborum voluptatibus, facere atque magni consequuntur? Ea, vero.</p>
+                </div>
+                <div class="main_image">
+                    <img src="img/bg5.png" >
+                </div>
+            </div>
+            <div class="social_icon">
+                <i class='bx bxl-facebook-circle'></i>
+                <i class='bx bxl-twitter' ></i>
+                <i class='bx bxl-instagram-alt'></i>
+                <i class='bx bxl-linkedin' ></i>
+            </div>
+            <div class="button">
+                <a href="#">SHOP NOW</a>
+                <i class='bx bx-chevron-right'></i>
+            </div>
+            <br><br><br><br>
+        </div>
+    </section>
+
+    <!--car section-->
+    <section class="cars" id="cars">
+        <div class="heading">
+            <span>All Cars </span>
+            <h2>We have all types cars</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est maiores id repellendus </p>
+        </div>
+        <br>
+        <!--ajouter-->
+        <div class="filter">
+            <button data-name="tous" class="active">Tous</button>
+            <button data-name="black">Black</button>
+            <button data-name="white">White</button>
+            <button data-name="gris">Gris</button>
+            <button data-name="mercedes">Mercedes</button>
+            <button data-name="lamborgini">Lamborgini</button>
+            <button data-name="bugati">Bugati</button>
+        </div>
+        <br><div class="tirageprix">
+            <button onclick="sortCarsAscending()">Sort by Price (Ascending)</button>
+        <button onclick="sortCarsDescending()">Sort by Price (Descending)</button>
+        </div>
+        
+        <!--cars container-->
+        <div class="cars-container container">
+            <!--box 1-->
+            <div class="box" data-color="black" data-model="lamborgini">
+                <img src="img/car1.jpg" alt="">
+                <h3>Car 1</h3>
+                <p>description:<br></p>
+                <div id="categorie">catégorie:<br></div> 
+                <div id="couleur">couleur:noir <br></div> 
+                <p>quantité en stock:4 </p>
+                <div id="prix">prix:60$ </div><br>
+                <a href="#" class="gallary_btn" onclick="addToCart(event)">Add to Cart</a> 
+                
+            </div>
+            <!--box 2-->
+            <div class="box" data-color="black" data-model="mercedes">
+                <img src="img/car2.jpg" alt="">
+                <h3>Car 2</h3>
+                <p>description:<br></p>
+                <div id="categorie">catégorie:<br></div> 
+                <div id="couleur">couleur:noir</div> 
+                <p>quantité en stock:4 </p>
+                <div id="prix">prix:95$</div><br>
+                <a href="#" class="gallary_btn" onclick="addToCart(event)">Add to Cart</a> 
+            </div>
+            <!--box 3-->
+            <div class="box" data-color="gris" data-model="mercedes">
+                <img src="img/car3.jpg" alt="">
+                <h3>Car 3</h3>
+                <p>description:<br></p>
+                <div id="categorie">catégorie:<br></div> 
+                <div id="couleur">couleur:noir</div> 
+                <p>quantité en stock:4 </p>
+                <div id="prix">prix:90$</div> <br>             
+                <a href="#" class="gallary_btn" onclick="addToCart(event)">Add to Cart</a> 
+            </div>
+            <!--box 4-->
+            <div class="box" data-color="white" data-model="mercedes">
+                <img src="img/car4.jpg" alt="">
+                <h3>Car 4</h3>
+                <p>description:<br></p>
+                <div id="categorie">catégorie:<br></div> 
+                <div id="couleur">couleur:noir</div> 
+                <p>quantité en stock:4 </p>
+                <div id="prix">prix:80$</div>  <br>         
+                <a href="#" class="gallary_btn" onclick="addToCart(event)">Add to Cart</a> 
+            </div>
+            <!--box 5-->
+            <div class="box"  data-color="gris" data-model="lamborgini">
+                <img src="img/car10.jpg" alt="">
+                <h3>Car 5</h3>
+                <p>description:<br></p>
+                <div id="categorie">catégorie:<br></div> 
+                <div id="couleur">couleur:noir</div> 
+                <p>quantité en stock:4 </p>
+                <div id="prix">prix:70$</div><br>
+                <a href="#" class="gallary_btn" onclick="addToCart(event)">Add to Cart</a> 
+            </div>
+            <!--box 6-->
+            <div class="box" data-color="black" data-model="mercedes">
+                <img src="img/car14.jpg" alt="">
+                <h3>Car 6</h3>
+                <p>description:<br></p>
+                <div id="categorie">catégorie:<br></div> 
+                <div id="couleur">couleur:noir</div> 
+                <p>quantité en stock:4 </p>
+                <div id="prix">prix:50$</div> <br>        
+                <a href="#" class="gallary_btn" onclick="addToCart(event)">Add to Cart</a> 
+            </div>
+        </div>
+        <br>
+        <a href="cart.html" id="viewcart">View Cart</a>
+    </section>
+    <script src="main.js"></script> 
+    <!--about-->
+    <section class="about container" id="about">
+        <div class="about-img">
+            <img src="img/car9.jpg" alt="">
+        </div>
+        <div class="about-text">
+            <span>About Us</span>
+            <h2>Cheap Prices with <br> Quality cars</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae doloremque at officia, molestias quidem vel a aperiam. Quis vel asperiores ex eaque consequatur, exercitationem culpa earum facere molestias labore ab?</p>
+            <!--about button-->
+            <a href="#" class="btn">Learn More</a>
+        </div>
+    </section>
+    
+    <!--parts section-->
+    <section class="parts" id="parts">
+        <div class="heading">
+            <span>What We Offer</span>
+            <h2>Our Car Is Always Excellent</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, illo! <br> Cum quam repellendus et exercitationem aliquam maxime delectus magnam at, voluptatem unde iure officia autem? Praesentium esse sint odio autem?</p>
+        </div>
+        <!--parts container-->
+        <div class="parts-container container">
+
+            <!--cars container-->
+<div id="cars-container" class="cars-container container">
+    <!-- Car data will be loaded here dynamically -->
+</div>
+
+            <!--box1-->
+            <div class="box">
+                <img src="img/part1.png" alt="">
+                <h3>Auto Spare Parts</h3>
+                <span>$120.99</span>
+                <i class="bx bxs-star">(6 Reviews)</i>
+                <a href="#" class="btn">Buy Now</a>
+                <a href="#" class="details">View Details</a>
+            </div>
+             <!--box2-->
+             <div class="box">
+                <img src="img/part2.png" alt="">
+                <h3>Auto Spare Parts</h3>
+                <span>$120.99</span>
+                <i class="bx bxs-star">(6 Reviews)</i>
+                <a href="#" class="btn">Buy Now</a>
+                <a href="#" class="details">View Details</a>
+            </div>
+             <!--box3-->
+             <div class="box">
+                <img src="img/part3.png" alt="">
+                <h3>Auto Spare Parts</h3>
+                <span>$120.99</span>
+                <i class="bx bxs-star">(6 Reviews)</i>
+                <a href="#" class="btn">Buy Now</a>
+                <a href="#" class="details">View Details</a>
+            </div>
+             <!--box4-->
+             <div class="box">
+                <img src="img/part4.png" alt="">
+                <h3>Auto Spare Parts</h3>
+                <span>$120.99</span>
+                <i class="bx bxs-star">(6 Reviews)</i>
+                <a href="#" class="btn">Buy Now</a>
+                <a href="#" class="details">View Details</a>
+            </div>
+             <!--box5-->
+             <div class="box">
+                <img src="img/part5.png" alt="">
+                <h3>Auto Spare Parts</h3>
+                <span>$120.99</span>
+                <i class="bx bxs-star">(6 Reviews)</i>
+                <a href="#" class="btn">Buy Now</a>
+                <a href="#" class="details">View Details</a>
+            </div>
+             <!--box6-->
+             <div class="box">
+                <img src="img/part6.png" alt="">
+                <h3>Auto Spare Parts</h3>
+                <span>$120.99</span>
+                <i class="bx bxs-star">(6 Reviews)</i>
+                <a href="#" class="btn">Buy Now</a>
+                <a href="#" class="details">View Details</a>
+            </div>
+        </div>
+    </section>
+    <!--blog container-->
+    <section class="blog" id="blog">
+        <div class="heading">
+            <span>Blog & News</span>
+            <h2>Our Blog Content</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, illo! <br> Cum quam repellendus et exercitationem aliquam maxime delectus magnam at, voluptatem unde iure officia autem? Praesentium esse sint odio autem?</p>
+        </div>
+        <div class="blog-container container">
+            <!--box1-->
+            <div class="box">
+                <img src="img/car12.jpg" alt="">
+                <span>October 12 2023</span>
+                <h3>How To Get Perfect Car At Low Price</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda totam enim provident a? Iste iure commodi eligendi dolore, provident harum, accusantium.</p>
+                <a href="#" class="blog-btn">Read More <i class='bx bx-chevron-right'></i></a>
+            </div>
+            <!--box2-->
+            <div class="box">
+                <img src="img/car5.jpg" alt="">
+                <span>September 5 2023</span>
+                <h3>How To Get Perfect Car At Low Price</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda totam enim provident a? Iste iure commodi eligendi dolore, provident harum, accusantium.</p>
+                <a href="#" class="blog-btn">Read More <i class='bx bx-chevron-right'></i></a>
+            </div>
+            <!--box3-->
+            <div class="box">
+                <img src="img/car13.jpg" alt="">
+                <span>Mars 15 2024</span>
+                <h3>How To Get Perfect Car At Low Price</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda totam enim provident a? Iste iure commodi eligendi dolore, provident harum, accusantium.</p>
+                <a href="#" class="blog-btn">Read More <i class='bx bx-chevron-right'></i></a>
+            </div>
+        </div>
+    </section>
+    <!--footer-->
+    <section class="footer">
+        <div class="footer-container container">
+            <div class="footer-box">
+                <a href="#" class="logo">Car <span>Point</span></a>
+                <div class="social">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h3>Page</h3>
+                <a href="#">Home</a>
+                <a href="#">Cars</a>
+                <a href="#">Parts</a>
+                <a href="#">Sales</a>
+            </div>
+            <div class="footer-box">
+                <h3>Legal</h3>
+                <a href="#">Privacy</a>
+                <a href="#">Refund Policy</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <p>Tunis</p>
+                <p>Gabes</p>
+                <p>Sfax</p>
+                <p>Sousse</p>
+            </div>
+        </div>
+    </section>
+    <div class="copyright">
+        <p>All Right Reserved</p>
+    </div>
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            // Retrieve form data from localStorage
+            var formData = JSON.parse(localStorage.getItem("formData"));
+            
+            // Create a new box with the form data
+            var newBox = document.createElement("div");
+            newBox.classList.add("box");
+            newBox.setAttribute("data-color", formData.couleur);
+            newBox.setAttribute("data-model", formData.categorie.toLowerCase());
+            newBox.innerHTML = `
+                <img src="${formData.imgUrl}" alt="">
+                <h3>${formData.description}</h3>
+                <div>Catégorie: ${formData.categorie}</div>
+                <div>Couleur: ${formData.couleur}</div>
+                <p>Quantité en stock: ${formData.quantity}</p>
+                <div>Prix: ${formData.prix}</div>
+                <a href="#" class="gallary_btn" onclick="addToCart(event)">Add to Cart</a>
+            `;
+    
+            // Append the new box to the cars-container
+            var carsContainer = document.querySelector(".cars-container");
+            carsContainer.appendChild(newBox);
+            
+            // Clear localStorage after use
+            localStorage.removeItem("formData");
+        });
+    </script>
+    
+    
+    
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendeur Dashboard</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <header>
+        <h1>Vendeur Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="#" id="interface1-btn">Interface 1</a></li>
+                <li><a href="#" id="interface2-btn">Interface 2</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-container">
+        <!-- Interface 1: Add Car -->
+        <section id="interface1">
+            <h2>Add Car</h2>
+            <form id="add-car-form">
+                <label for="description">Description:</label>
+                <input type="text" id="description" name="description" required><br>
+                <label for="categorie">Categorie:</label>
+                <input type="text" id="categorie" name="categorie" required><br>
+                <label for="couleur">Couleur:</label>
+                <input type="text" id="couleur" name="couleur" required><br>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" required><br>
+                <label for="prix">Prix:</label>
+                <input type="number" id="prix" name="prix" required><br>
+                <label for="img-url">Image URL:</label>
+                <input type="url" id="img-url" name="img-url" required><br>
+                <button type="submit">+Add Car+</button>
+                <!-- Add button for redirecting to catalogue.html -->
+                <button type="button" id="catalogueBtn">Catalogue</button>
+            </form>
+        </section>
+
+        <!-- Interface 2: Display Confirmation Data -->
+        <section id="interface2">
+            <h1>Submitted Data</h1>
+            <p>Name: <span id="displayName"></span></p>
+            <p>surName: <span id="displaysurName"></span></p>
+            <p>Email: <span id="displayEmail"></span></p>
+            <p>PhoneNumber: <span id="displayphoneNumber"></span></p>
+            <p>Address: <span id="displayaddress"></span></p>
+            <p>Email-address: <span id="displayemailaddress"></span></p>
+            <p>DeliveryDate: <span id="displaydeliveryDate"></span></p>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Vendeur Dashboard</p>
+    </footer>
+
+    <script>
+        // Redirect to catalogue.html when the button is clicked
+        document.getElementById("catalogueBtn").addEventListener("click", function() {
+            window.location.href = "catalogue.html";
+        });
+
+        // Rest of your JavaScript code...
+    </script>
+    <script>
+        // Retrieve data from localStorage and display it
+        var name = localStorage.getItem("name");
+        var surName = localStorage.getItem("surname");
+        var email = localStorage.getItem("email");
+        var phoneNumber = localStorage.getItem("phoneNumber");
+        var address = localStorage.getItem("address");
+        var emailAddress = localStorage.getItem("emailAddress");
+        var deliveryDate = localStorage.getItem("deliveryDate");
+        
+        document.getElementById("displayName").textContent = name;
+        document.getElementById("displaysurName").textContent = surName;
+        document.getElementById("displayEmail").textContent = email;
+        document.getElementById("displayphoneNumber").textContent = phoneNumber;
+        document.getElementById("displayaddress").textContent = address;
+        document.getElementById("displayemailaddress").textContent = emailAddress;
+        document.getElementById("displaydeliverydate").textContent = deliveryDate;
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
