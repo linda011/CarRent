@@ -17,9 +17,3 @@ Users can browse available cars, make reservations, and receive booking confirma
 - Booking confirmation
 - Vendor dashboard (WIP)
 - RESTful API endpoints (upcoming)
-
-## 🚀 Getting Started (for developers)
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/linda011/mini_projet_carrent.git
